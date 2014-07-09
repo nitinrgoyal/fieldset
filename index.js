@@ -52,3 +52,6 @@ Person.findOne({name:'Jhon'},Person.getFieldNamesForSet('public')).exec(function
     console.log( "-------------------------------------------------- ");
 });
 
+
+
+
