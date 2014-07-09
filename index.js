@@ -8,7 +8,7 @@
 
 
 var mongoose = require('mongoose');
-//var fieldsSetPlugin = require('mongoose-fieldset');
+var fieldsSetPlugin = require('mongoose-fieldset');
 var Schema = mongoose.Schema;
 
 /*Describe a Schema*/
@@ -25,10 +25,11 @@ var PersonSchema = new Schema({
 
 
 /*Add field alias plugin*/
-// PersonSchema.plugin(fieldsAliasPlugin);
-mongoose.connect('mongodb://localhost/myapp');
+PersonSchema.plugin(fieldsSetPlugin);
+console.log("sdkfhskdfjd");
+mongoose.connect('mongodb://localhost/fieldset');
 var Person =  mongoose.model('Person', PersonSchema);
-//mongoose.model('Person');
+
 var person = new Person({
     'timestamp'	: new Date(),
     'name'		: 'Jhon',
@@ -46,8 +47,8 @@ console.log( "---------------get Private Fields-------------------- ");
 console.log(person.toObject({fieldSet:'private', transform:true}));
 
 console.log('---------------Person Public FieldSet-------------');
-Person.findOne({name:'Jhon'},Person.getFieldNamesForSet('public')).exec(function(err,objs){
-    console.log( objs);
+Person.findOne({name:'Jhon'},Person.getFieldNamesForSet('public')).exec(function(err,result){
+    console.log(result);
     console.log( "-------------------------------------------------- ");
 });
 
