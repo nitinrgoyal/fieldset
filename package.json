@@ -1,0 +1,29 @@
+{
+	"name": "mongoose-fieldset_exmaple",
+	"version": "1.0.1",
+	"description": "Mongoose Field-Set plugin exmaple",
+	"dependencies": {
+		"mongoose": ">=2.0.0",
+		"mongoose-fieldset":">1.0.0"
+	},
+	"devDependencies": {
+	},
+	"scripts": {
+	},
+	"repository": {
+		"type": "git",
+		"url": "github.com/fieldset"
+	},
+	"keywords": [
+		"mongoose",
+		"plugin",
+		"fieldset",
+		"field",  
+		"set",
+		"find",
+		"query",
+		"toObject"
+	],
+	"author": "Richa Goyal<er.richagoyal@gmail.com>",
+	"license": "MIT"
+	}
