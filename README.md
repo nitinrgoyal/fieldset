@@ -4,7 +4,7 @@
 
 ## Documentation
 
-// When querying database some fields are not required everytime. So instead of filtering data everytime this is solution. We define fieldset property while defining schema of the the mongoose with every field. Then while fetching object using toObject we just need to pass the fieldset as parameter we require in query. FieldSet can also be used in second way as it can give all fields which belong to particular fieldset. 
+When querying database some fields are not required everytime. So instead of filtering data everytime this is solution. We define fieldset property while defining schema of the the mongoose with every field. Then while fetching object using toObject we just need to pass the fieldset as parameter we require in query. FieldSet can also be used in second way as it can give all fields which belong to particular fieldset. 
 
 ## Sample `test.js`
 
